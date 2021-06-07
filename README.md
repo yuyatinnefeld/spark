@@ -1,5 +1,5 @@
 <h1 align="center">Apache Spark</h1> <br>
-<h2> Table of Contents </h2>
+<h2> 🚀 Table of Contents 🚀 </h2>
 
 - [About](#about)
 - [Benefit](#benefits)
