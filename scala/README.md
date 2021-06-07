@@ -131,6 +131,7 @@ lazy val root = (project in file("."))
       "org.apache.spark" %% "spark-sql" % "3.1.1",
       "org.apache.spark" %% "spark-mllib" % "3.0.0",
       "org.apache.spark" %% "spark-streaming" % "3.0.0",
+      "org.apache.spark" %% "spark-avro" % "2.4.0",
       "org.twitter4j" % "twitter4j-core" % "4.0.4",
       "org.twitter4j" % "twitter4j-stream" % "4.0.4",
       "org.apache.spark" % "spark-streaming-kafka-0-10_2.12" % "3.1.1",
@@ -154,7 +155,7 @@ touch data/book.txt
 3. create spark program
 ```bash
 mkdir src/main/scala/com/spark
-touch src/main/scala/com/spark/mySparkTest.scala
+touch src/main/scala/com/spark/MySparkTest.scala
 ```
 4. update spark program
 ```scala
@@ -162,7 +163,7 @@ import org.apache.log4j._
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
 
-object mySparkTest extends App{
+object MySparkTest extends App{
 
   case class Book(value:String)
 
@@ -214,19 +215,19 @@ spark-submit --class <package_path.scala_program> <jar_file_path>
 ```
 
 ```bash
-targetspark-submit --class com.spark.mySparkTest target/scala-2.12/my-app_2.12-1.0.jar
+targetspark-submit --class com.spark.MySparkTest target/scala-2.12/my-app_2.12-1.0.jar
 ```
 
 run application locally on 8 cores
 
 ```bash
-spark-submit --master local[8] --class com.spark.mySparkTest target/scala-2.12/my-app_2.12-1.0.jar
+spark-submit --master local[8] --class com.spark.MySparkTest target/scala-2.12/my-app_2.12-1.0.jar
 ```
 
 run on a Spark standalone cluster in client deploy mode
 ```bash
 spark-submit \
---class com.spark.mySparkTest \
+--class com.spark.MySparkTest \
 --master spark://207.184.161.138:7077 \
 --executor-memory 20G \
 --total-executor-cores 100 \
