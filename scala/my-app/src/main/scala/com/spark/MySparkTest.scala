@@ -5,7 +5,7 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
 
 
-object mySparkTest extends App{
+object MySparkTest extends App{
 
   case class Book(value:String)
 
