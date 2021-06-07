@@ -1,0 +1,9 @@
+
+running spark file without IDE
+1. export Jar file of your scala project
+2. define correct script path (for local / cloud env)
+3. spark-submit to execute your driver script to outside of the IDE
+4. spark-submit -class <class object> --jars <paths to any dependencies> --file <files your want placed alongside your app> <your JAR file>
+
+
+
