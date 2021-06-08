@@ -17,8 +17,6 @@ object BasicStream {
 
     println("Structured Streaming created...")
 
-    import spark.implicits._
-
     val rawDF = spark
       .readStream
       .format("rate")

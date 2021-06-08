@@ -36,7 +36,6 @@ object JSONStream {
       )
     )
 
-    import spark.implicits._
 
     val rawDF = spark
       .readStream

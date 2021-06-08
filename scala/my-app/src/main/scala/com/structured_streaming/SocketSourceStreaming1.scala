@@ -19,6 +19,7 @@ object SocketSourceStreaming1 {
     val port = "9999"
 
     println("Structured Streaming created...")
+
     val rawDF = spark.readStream
       .format("socket")
       .option("host", host)

@@ -24,7 +24,6 @@ object CSVStream1 extends App {
       StructField("friends", IntegerType))
   )
 
-  import spark.implicits._
 
   //create stream for fb friends data
   val rawDF = spark.readStream
