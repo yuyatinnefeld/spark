@@ -1,0 +1,56 @@
+#Q1 E-Commerce
+- who has the biggest total order amount?
+- avg order amount by customer?
+=> data/ecommerce/customer-orders.csv
+
+
+#Q2 E-Commerce
+- which products are the top 10 sales Items?
+=> data/ecommerce/customer-orders.csv
+
+
+#Q3 Social Media
+- who has the most friends?
+- avg friends by age group?
+    Age Group
+    A x <= 25
+    B 25 < x < 30
+    C 31 < x < 40
+    D 41 < x < 50
+    E x > 51
+
+=>data/socialmedia/fakefriends.csv
+
+
+#Q4 Movie
+- top 10 ranking the most watched movies?
+- how many movies with rating 5?
+- what kind of user watched movies the most?
+=>data/movie/movie.item
+=>data/movie/movie.data
+=>data/movie/movie.user
+
+
+#Q5 E-Commerce
+- who has the biggest total order amount by country?
+- avg order amount by customer?
+- how high was the revenue in 2011 from France and UK?
+
+=> data/ecommerce/
+
+#Q6 Anime Review
+- how many anime movies and users there are?
+- the worst anime of the history?
+- the best sci-Fi, mystery anime of the history?
+
+=> data/movie/anime_metadata.csv
+=> data/movie/anime_rating.csv
+
+#Q7 W**d Price in USA
+- which state has the highest price of the highest quality w**d?
+- which state has the lowest price of the highest quality w**d?
+- what is the avg price of the w**d?
+- the best sci-Fi, mystery anime of the history?
+
+"State","HighQ","HighQN","MedQ","MedQN","LowQ","LowQN"
+"Alabama","$339.06","1042","$198.64","933","$149.49","123"
