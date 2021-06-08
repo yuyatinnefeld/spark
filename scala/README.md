@@ -215,7 +215,7 @@ spark-submit --class <package_path.scala_program> <jar_file_path>
 ```
 
 ```bash
-targetspark-submit --class com.spark.MySparkTest target/scala-2.12/my-app_2.12-1.0.jar
+spark-submit --class com.spark.MySparkTest target/scala-2.12/my-app_2.12-1.0.jar
 ```
 
 run application locally on 8 cores

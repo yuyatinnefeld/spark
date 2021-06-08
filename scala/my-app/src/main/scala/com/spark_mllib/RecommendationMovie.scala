@@ -10,8 +10,6 @@ import scala.collection.mutable
 object Recommendation {
 
   case class MoviesNames(movieId: Int, movieTitle: String)
-
-  // Row format to feed into ALS (Alternating Least Square)
   case class Rating(userID: Int, movieID: Int, rating: Float)
 
   def getMovieName(movieNames: Array[MoviesNames], movieId: Int): String = {
