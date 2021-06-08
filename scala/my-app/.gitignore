@@ -54,6 +54,10 @@ __pycache__/
 # Used for C extensions
 *.so
 
+# spark checkpoint
+.checkpoint
+/checkpoint
+
 # Used for Distribution / packaging
 .Python
 build/
