@@ -7,7 +7,7 @@ import org.apache.spark.sql.types.{IntegerType, LongType, StringType, StructType
 
 import scala.collection.mutable
 
-object Recommendation {
+object RecommendationMovie {
 
   case class MoviesNames(movieId: Int, movieTitle: String)
   case class Rating(userID: Int, movieID: Int, rating: Float)
@@ -26,8 +26,6 @@ object Recommendation {
       .master("local[*]")
       .getOrCreate()
 
-    println("Loading movie names...")
-
     val moviesNamesSchema = new StructType()
       .add("movieID", IntegerType, nullable = true)
       .add("movieTitle", StringType, nullable = true)
@@ -39,14 +37,11 @@ object Recommendation {
       .add("rating", IntegerType, nullable = true)
       .add("timestamp", LongType, nullable = true)
 
-
     import spark.implicits._
-    // Create a broadcast dataset of movieID and movieTitle.
-    // Apply ISO-885901 charset
 
     val namesDF = spark.read
       .option("sep", "|")
-      .option("charset", "ISO-8859-1")
+      .option("charset", "ISO-8859-1") // Apply ISO-885901 charset
       .schema(moviesNamesSchema)
       .csv("data/movie/movie.item")
       .as[MoviesNames]
