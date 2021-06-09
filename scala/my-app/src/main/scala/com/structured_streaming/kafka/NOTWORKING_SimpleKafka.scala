@@ -5,10 +5,7 @@ import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions.{col, explode, split}
 
 
-//spark-submit --class com.spark_streaming.kafka.SimpleKafka target/scala-2.12/my-app_2.1c2-1.0.jar
-//spark-submit --class com.spark_streaming.kafka.SimpleKafka target/scala-2.12/my-app_2.12-1.0.jar
-
-object SimpleKafka {
+object NOTWORKING_SimpleKafka {
 
   case class KafkaVal(key:String, value:String)
 

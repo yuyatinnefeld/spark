@@ -1,4 +1,4 @@
-package com.structured_streaming.kafka
+package com.spark_streaming.kafka
 
 import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 import org.apache.log4j.{Level, Logger}
@@ -6,11 +6,20 @@ import org.apache.log4j.{Level, Logger}
 import java.time.LocalDateTime
 import java.util.Properties
 
-object KafkaDataGenerator extends App{
+object KafkaDataGenerator {
 
-  Logger.getLogger("org").setLevel(Level.ERROR)
+  def main(args: Array[String]): Unit = {
+    Logger.getLogger("org").setLevel(Level.ERROR)
 
-  def PropsSetup(host: String): Properties ={
+    println("Starting Kafka Data Generator..")
+
+    Thread.sleep(5000)
+    val props = PropsSetup("localhost:9092")
+    ProducerKafka(props, "spark_kafka")
+
+  }
+
+  def PropsSetup(host: String): Properties = {
     val props = new Properties()
     props.put("bootstrap.servers", host)
     return props
@@ -26,7 +35,7 @@ object KafkaDataGenerator extends App{
     val producer = new KafkaProducer[String, String](props)
     //val record = new ProducerRecord[String, String](topic, "key", "value")
 
-    while(true){
+    while (true) {
       Thread.sleep(10000);
       val generated_data = scala.util.Random.nextInt(10000).toString
       val timestamp = LocalDateTime.now()
@@ -36,11 +45,5 @@ object KafkaDataGenerator extends App{
     }
     producer.close()
   }
-
-  println("Starting Kafka Data Generator..")
-
-  Thread.sleep(5000)
-  val props = PropsSetup("localhost:9092")
-  ProducerKafka(props,"spark_kafka")
 
 }
