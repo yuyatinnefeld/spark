@@ -50,3 +50,9 @@ conf
 #data
 data
 /data
+
+
+#python
+.venv
+/venv
+venv
