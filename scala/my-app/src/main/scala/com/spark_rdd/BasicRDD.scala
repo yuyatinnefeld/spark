@@ -1,28 +1,30 @@
 package com.spark_rdd
 
+import org.apache.kafka.common.utils.Utils.sleep
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.SparkContext
 
 object BasicRDD {
   def main(args: Array[String]): Unit = {
+
     Logger.getLogger("org").setLevel(Level.ERROR)
 
-    val sc = new SparkContext("local[*]", "rddBasic")
-    val aList = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    val input = sc.parallelize(aList)
+    val sc = new SparkContext("local[3]", "rddBasic")
+    val rdd = sc.parallelize(List(1, 2, 3, 4, 6, 6, 7, 10, 10, 10))
 
-    // ## RDD MAP FUNC ## //
-    val result = input.map(x => x * x).collect()
-    result.foreach(println)
+    println("open the URL: http://localhost:4040")
 
-    // ## RDD FILTER FUNC ## //
-    val data = Seq("Project alibaba", "Gutenberg’s", "Alice’s", "Adventures", "in", "Wonderland", "Project", "Gutenberg’s", "Adventures", "in", "Wonderland", "Project", "Gutenberg’s")
+    while(true){
+      println("## NEVER ENDING :) ###")
 
-    val input2 = sc.parallelize(data)
-    val result2 = input2.filter(x => x.length > 9)
-    result2.foreach(println)
+      val moreThan8 = rdd.filter(_ > 8)
+      rdd.foreach(println)
+      moreThan8.map(x => x * 100).foreach(println)
 
+      sleep(3000)
+    }
 
+    sc.stop()
   }
 
 }
