@@ -6,7 +6,6 @@ import org.apache.spark.SparkContext
 
 object BasicRDD {
   def main(args: Array[String]): Unit = {
-
     Logger.getLogger("org").setLevel(Level.ERROR)
 
     val sc = new SparkContext("local[3]", "rddBasic")
