@@ -5,7 +5,7 @@
 # make sure to change the volume directive to an actual directory in the filesystem
 docker run \
     --name streaming-mariadb \
-    -v /Users/yuyatinnefeld/desktop/SparkStreamingPatterns/mariadb:/var/lib/mysql \
+    -v /Users/yuyatinnefeld/desktop/projects/spark/docker-spark-kafka-mariadb/mariadb:/var/lib/mysql \
     -e MYSQL_ROOT_PASSWORD=streaming \
     -e MYSQL_USER=streaming \
     -e MYSQL_PASSWORD=streaming \
