@@ -4,7 +4,6 @@
 - [About](#about)
 - [Benefit](#benefits)
 - [Info](#info)
-- [Use-cases](#use-case)
 - [Components](#components)
 - [Setup](#setup)
 
@@ -15,7 +14,8 @@ Apache Spark is written in Scala and because of its scalability on JVM - Scala p
 
 ## Benefit
 You can learn in this project:
-- [Spark Setup](https://github.com/yuyatinnefeld/spark/tree/master/scala) 
+- Row Level (RDD) & Structured API (DataFrame, DataSet, SQL)
+- [Spark Configuration](https://github.com/yuyatinnefeld/spark/tree/master/scala) 
 - Spark Ecosystem 
     - [Spark Core RDD](https://github.com/yuyatinnefeld/spark/tree/master/scala/my-app/src/main/scala/com/spark_rdd)
     - [Spark SQL (DataFrame & DataSet)](https://github.com/yuyatinnefeld/spark/tree/master/scala/my-app/src/main/scala/com/spark_sql)

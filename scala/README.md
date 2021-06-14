@@ -19,7 +19,6 @@ https://www.oracle.com/de/java/technologies/javase-jdk15-downloads.html
 
 Spark & Scala SDK
 ```bash
-brew install scala
 brew install apache-spark
 ```
 
