@@ -1,4 +1,4 @@
-package book.definitiv_spark
+package book.definitive_spark
 
 import org.apache.log4j._
 import org.apache.spark.sql.SparkSession
