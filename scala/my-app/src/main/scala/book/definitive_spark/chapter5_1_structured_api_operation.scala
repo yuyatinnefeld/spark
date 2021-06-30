@@ -5,7 +5,7 @@ import org.apache.spark.sql.{Row, SparkSession}
 import org.apache.spark.sql.functions.{col, column, expr, lit}
 import org.apache.spark.sql.types.{IntegerType, LongType, StringType, StructType}
 
-object chapter5_structured_api_operation {
+object chapter5_1_structured_api_operation {
   def main(args: Array[String]): Unit = {
     Logger.getLogger("org").setLevel(Level.ERROR)
 
@@ -22,13 +22,10 @@ object chapter5_structured_api_operation {
     println("raw data")
     df.show()
 
-
     println("### Schema ###")
-
 
     println("automate created schema ")
     df.printSchema()
-
 
     println("manually created schema ")
 
@@ -43,7 +40,6 @@ object chapter5_structured_api_operation {
       .load("data/definitive_guide_book/flight-data/json/*.json")
 
     df2.printSchema()
-
 
     println("### Columns and Expressions ###")
 
@@ -70,9 +66,9 @@ object chapter5_structured_api_operation {
     println(myRow1.getString(0))
 
 
-    println("### DF Creation ###")
+    println("### DF Creation (Rows + Columns) ###")
     val myRows = Seq(
-      myRow1, myRow2,myRow3
+      myRow1, myRow2, myRow3
     )
 
     val myRDD = spark.sparkContext.parallelize(myRows)
@@ -100,7 +96,6 @@ object chapter5_structured_api_operation {
     println("### DF select and selectExpr ###")
 
     df2.select("DEST_COUNTRY_NAME", "ORIGIN_COUNTRY_NAME").show(2)
-
 
     df2.select(expr("DEST_COUNTRY_NAME AS destination")).show(2)
 
