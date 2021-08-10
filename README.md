@@ -22,7 +22,7 @@ You can learn in this project:
     - [Spark MLlib](https://github.com/yuyatinnefeld/spark/tree/master/scala/my-app/src/main/scala/com/spark_mllib)
     - [Spark Streaming (Twitter & Kafka)](https://github.com/yuyatinnefeld/spark/tree/master/scala/my-app/src/main/scala/com/spark_streaming)
     - [Structured-Streaming](https://github.com/yuyatinnefeld/spark/tree/master/scala/my-app/src/main/scala/com/structured_streaming)
-- [Spark Docker](https://github.com/yuyatinnefeld/spark/tree/master/kafka-docker)
+- [Spark Docker](https://github.com/yuyatinnefeld/spark/tree/master/java/docker-spark-kafka-flink)
 - [Spark Notebook](https://github.com/yuyatinnefeld/spark/tree/master/scala/my-app/src/main/scala/spark_note)
 - [Spark Deploy](https://github.com/yuyatinnefeld/spark/tree/master/scala/my-app/src/main/scala/spark_deploy) 
 - [Spark GCP](https://github.com/yuyatinnefeld/spark/tree/master/scala/my-app/src/main/scala/gcp)
@@ -40,7 +40,7 @@ You can learn in this project:
 ### [Scala](https://github.com/yuyatinnefeld/spark/tree/master/scala)
 ### [Python](https://github.com/yuyatinnefeld/spark/tree/master/python)
 ### [Java](https://github.com/yuyatinnefeld/spark/tree/master/java)
-### [Kafka-Docker](https://github.com/yuyatinnefeld/spark/tree/master/kafka-docker)
+### [Kafka-Docker](https://github.com/yuyatinnefeld/spark/tree/master/java/docker-spark-kafka-flink)
 
 ## Benefits
 Apache Spark has many features which make it a great choice as a big data processing engine. Many of these features establish the advantages of Apache Spark over other Big Data processing engines. Spark has the following beneftis:
